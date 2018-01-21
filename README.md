@@ -2,10 +2,10 @@
 
 ## Sources 
 
-https://projects.raspberrypi.org/en/
-https://rpiai.com/
+1. https://projects.raspberrypi.org/en/
+2. https://rpiai.com/
 
 ## Project Ideas
 
-Build Linux + Patches Set 
-Weather Stations
+1. Build Linux + Patches Set 
+2. Weather Stations
