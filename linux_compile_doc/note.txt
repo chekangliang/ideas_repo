@@ -1,1 +1,1 @@
-kernel source git address: (https://github.com/raspberrypi/linux)
+xcompile link using docker: https://hackaday.com/2016/09/01/how-to-use-docker-to-cross-compile-for-raspberry-pi-and-more/
