@@ -1,0 +1,234 @@
+    1  apt-get install nfs-common
+    2  sudo apt-get install nfs-common
+    3  mkdir /mnt/nfs_drobo
+    4  mkdir /home/nfs_drobo
+    5  mkdir /home/pi/nfs_drobo
+    6  mount 192.168.1.3:/home/nfs /home/pi/nfs_drobo/
+    7  sudo mount 192.168.1.3:/home/nfs /home/pi/nfs_drobo/
+    8  sudo mount 192.168.1.3:/RPIFS /home/pi/nfs_drobo/
+    9  sudo mount 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo/
+   10  rpcinfo -p | grep nfs
+   11  ls
+   12  sudo mount 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo/ -o username=admin,password=hjcsyl
+   13  sudo mount 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo/ -o username=admin,password=hjcsyl,nfsvers=3
+   14  sudo mount -t nfs 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo/ -o username=admin,password=hjcsyl,nfsvers=3
+   15  mount -t nfs -o nfsvers=3 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo
+   16  sudo mount -t nfs -o nfsvers=3 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo
+   17  sudo mount -t nfs -o nfsvers=3,username=admin,password=hjcsyl 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo
+   18  mount -t nfs -o nfsvers=3 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo
+   19  sudo mount -t nfs -o nfsvers=3 192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo
+   20  cd nfs_drobo/
+   21  ls
+   22  cd Documents/
+   23  ls
+   24  cd ..
+   25  ls
+   26  cd ..
+   27  ls
+   28  sudo vi /etc/fstab 
+   29  echo '192.168.1.3:/
+   30  mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo nfs defaults 0 0'
+   31  echo '192.168.1.3:/
+   32  mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo nfs defaults 0 0'
+   33  echo '192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo nfs defaults 0 0'
+   34  echo '192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo nfs defaults 0 0' >> /etc/fstab 
+   35  sudo echo '192.168.1.3:/mnt/DroboFS/Shares/RPIFS /home/pi/nfs_drobo nfs defaults 0 0' >> /etc/fstab 
+   36  su -
+   37  su root
+   38  sudo su-
+   39  sudo su -
+   40  cat /etc/fstab 
+   41  reboot
+   42  sud reboot
+   43  sudo reboot
+   44  passwd
+   45  lsblk
+   46  ls
+   47  cd /media/pi/SETTINGS/
+   48  ls
+   49  cd /
+   50  ls
+   51  pwd
+   52  curl -sSL https://get.docker.com
+   53  :q
+   54  ls
+   55  cd home/
+   56  ls
+   57  cd p
+   58  cd pi
+   59  ls
+   60  ping6 drobo5n
+   61  ;ls
+   62  ls
+   63  cd nfs_drobo/
+   64  ls
+   65  cd Documents/
+   66  ls
+   67  exit
+   68  sudo apt install git
+   69  git config --global user.name "chekangliang"
+   70  git config --global user.email "che.liang@gmail.com"
+   71  sudo apt install vim
+   72  git config --global core.editor vim
+   73  ls
+   74  cd nfs_drobo/
+   75  ls
+   76  cd /home/
+   77  ls
+   78  cd pi/
+   79  ls
+   80  cd nfs_drobo/
+   81  ls
+   82  cd ..
+   83  ls
+   84  mkdir projects 
+   85  cd projects/
+   86  ls
+   87  mkdir snitch-sniffer
+   88  cd snitch-sniffer/
+   89  vim README.md
+   90  ls
+   91  vim README.md
+   92  git init
+   93  ls -a
+   94  ls -lta
+   95  ls -a .git
+   96  git add README.md
+   97  git status
+   98  git commit -am 'add README.md'
+   99  touch snitch-sniffer.py
+  100  touch quidditch-rules.json
+  101  git add --all
+  102  git commit -am 'add json rules and python program' 
+  103  git commit -am 'finish find function'
+  104  git log snitch-sniffer.py
+  105  vim quidditch-rules.json
+  106  git commit -am 'some experimental change to quidditch-rule.json'
+  107  git log snitch-sniffer.py
+  108  git log quidditch-rules.json
+  109  git log -p quidditch-rules.json
+  110  git log quidditch-rules.json
+  111  git checkout da7193f8457cc45bb96ccf0c415786b21d64998b snitch-sniffer.py
+  112  vim snitch-sniffer.py 
+  113  git commit -am 'restore the experimental changes'
+  114  git log da7193f8457cc45bb96ccf0c415786b21d64998b
+  115  git log snitch-sniffer.py
+  116  git status
+  117  git checkout -b lidar-version
+  118  git status
+  119  git branch
+  120  ls
+  121  touch snitch-sniffer-lidar.py
+  122  git add --all
+  123  git commit -am 'some lidar changes' 
+  124  git checkout master
+  125  ls
+  126  git checkout lidar-version
+  127  ls
+  128  git checkout master
+  129  git merge lidar-version 
+  130  ls
+  131  git remote add origin https://github.com/chekangliang/snitch-sniffer.git
+  132  git push -u origin master
+  133  cd ..
+  134  ls
+  135  mkdir ideas_repo
+  136  cd ideas_repo/
+  137  ls
+  138  vim README.md
+  139  git init
+  140  git add --all
+  141  git status
+  142  git commit -am 'initial edit for README.md'
+  143  git remote add origin https://github.com/chekangliang/ideas_repo.git
+  144  git push -u origin master
+  145  cd ~
+  146  ls
+  147  cd projects/
+  148  ls
+  149  cd ideas_repo/
+  150  ls
+  151  vim README.md 
+  152  git remote add origin https://github.com/chekangliang/ideas_repo.git
+  153  git push -u origin master
+  154  ls
+  155  cat README.md 
+  156  git commit -am 'formatting'
+  157  git push -u origin master
+  158  sudo apt-install tmux
+  159  sudo apt-get install tmux
+  160  ls
+  161  cd projects/
+  162  ls
+  163  cd ideas_repo/
+  164  ls
+  165  cat README.md 
+  166  uname -r
+  167  cd ..
+  168  git clone https://github.com/raspberrypi/linux.git
+  169  ls\
+  170  ls
+  171  cd ideas_repo/
+  172  ls
+  173  mkdir linux_compile_doc
+  174  cd linux_compile_doc/
+  175  git add --all
+  176  vim note.txt
+  177  echo "source https://elinux.org/Raspberry_Pi_Kernel_Compilation" > note.txt
+  178  git add --all
+  179  cat note.txt 
+  180  echo "kernel source git address: (https://github.com/raspberrypi/linux)" > note.txt 
+  181  git commit -am "notes on compiling the kernel"
+  182  ls
+  183  cd ..
+  184  ls
+  185  git status
+  186  git log
+  187  exit
+  188  cd ~/projects/
+  189  ls
+  190  cd linux/
+  191  ls
+  192  cd ..
+  193  sudo apt-get update
+  194  apt-get -y dist-upgrade
+  195  sudoapt-get -y dist-upgrade
+  196  sudo apt-get -y dist-upgrade
+  197  sudo apt-get -y install gcc make bc screen ncurses-dev git
+  198  cd /usr/src/
+  199  ls
+  200  mkdir GIT
+  201  sudo mkdir GIT
+  202  cd GIT/
+  203  git init
+  204  sudo su -
+  205  cd ~
+  206  ls
+  207  cd projects/
+  208  ls
+  209  cd linux/
+  210  ls
+  211  KERNEL=kernel7
+  212  make bcm2709_defconfig
+  213  echo "better instruction: https://www.raspberrypi.org/documentation/linux/kernel/building.md" >> ../ideas_repo/linux_compile_doc/note.txt 
+  214  make -j4 zImage modules dtbs
+  215  sudo make modules_install
+  216  cd /boot/
+  217  ls
+  218  cd ~/projects/
+  219  ls
+  220  uanem -r
+  221  uname -r
+  222  sudo cp arch/arm/boot/dts/*.dtb /boot/
+  223  cd linux
+  224  sudo cp arch/arm/boot/dts/overlays/*.dtb* /boot/overlays/
+  225  sudo cp arch/arm/boot/dts/overlays/README /boot/overlays/
+  226  sudo cp arch/arm/boot/zImage /boot/$KERNEL.img
+  227  sudo reboot
+  228  cd ~/projects/
+  229  ls
+  230  git clone  https://github.com/raspberrypi/tools
+  231  tmux 
+  232  uname -r
+  233  history
+  234  history > ~/projects/ideas_repo/linux_compile_doc/compile_success_history
